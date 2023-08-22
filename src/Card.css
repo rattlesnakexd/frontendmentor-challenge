@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+.body{
+    display: flex;
+    border: 1px solid black;
+    background-color: hsl(233, 47%, 7%);
+    height: 95vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card__left {
+    background-color: hsl(244, 37%, 16%);
+    flex: 0.55;
+    border: 1px solid black;
+    height: auto;
+}
+
+.cardleft__heading > h1 {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.cardleft__heading{
+    text-align:left;
+    padding-left: 35px;
+    padding-top: 35px;
+
+}
+.cardleft__body{
+    text-align: left;
+    padding-left: 35px;
+}
+
+.cardleft__body > p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+}
+.card__right {
+    background-color: hsl(244, 37%, 16%);
+    width: 35%;
+    border: 1px solid black;
+    height: auto;
+    position: relative;
+}
+
+.card__right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 64%, 61%);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.card__right > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.colored{
+    color: rgb(189, 98, 189);
+}
+
+.cardleft__stats{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+
+.stat > h2{
+    color:white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;   
+}
+
+.stat > p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 375px) {
+    .card {
+        flex-direction: column-reverse;
+    }
+    .card__left,
+    .card__right {
+        width: 100%;
+    }
+}
+
